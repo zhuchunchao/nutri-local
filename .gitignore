@@ -1,0 +1,8 @@
+node_modules/
+data/store.json
+data/api-key.local
+.nutri-api-key
+.env
+.env.*
+!.env.example
+*.log

@@ -1,0 +1,6 @@
+# Copy to data/api-key.local and put ONE secret on a non-comment line.
+# data/api-key.local is gitignored — never commit real keys.
+#
+# Alternative: export NUTRI_API_KEY=your-secret
+#
+replace-me-with-a-long-random-secret

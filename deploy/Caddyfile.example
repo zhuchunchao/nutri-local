@@ -1,0 +1,14 @@
+# NutriLocal — Caddy reverse proxy (auto HTTPS → Node on 8790)
+# Do NOT expose plain :8790 to the public Internet.
+#
+# caddy run --config deploy/Caddyfile.example
+# Node: HOST=0.0.0.0 PORT=8790 NUTRI_API_KEY=... npm start
+# (or HOST=127.0.0.1 when Caddy is on the same machine)
+
+nutri.example.com {
+        encode gzip
+        reverse_proxy 127.0.0.1:8790 {
+                header_up X-Api-Key {http.request.header.X-Api-Key}
+                header_up X-Forwarded-Proto {scheme}
+        }
+}

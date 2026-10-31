@@ -1,0 +1,2372 @@
+{
+  "version": 1,
+  "source": "public-nutrition-estimates-for-personal-offline-use",
+  "note": "通用公开营养估算数据，非薄荷专有数据库。可自行增补 data/foods.json。",
+  "categories": [
+    {
+      "id": 1,
+      "name": "主食谷物",
+      "code": "grain"
+    },
+    {
+      "id": 2,
+      "name": "肉蛋奶豆",
+      "code": "protein"
+    },
+    {
+      "id": 3,
+      "name": "蔬果",
+      "code": "produce"
+    },
+    {
+      "id": 4,
+      "name": "油脂零食饮品",
+      "code": "extra"
+    },
+    {
+      "id": 5,
+      "name": "常见菜肴",
+      "code": "dish"
+    }
+  ],
+  "foods": [
+    {
+      "code": "dami",
+      "name": "大米",
+      "aliases": [
+        "米饭",
+        "白米饭"
+      ],
+      "category_id": 1,
+      "calories": 116,
+      "protein": 2.6,
+      "fat": 0.3,
+      "carbohydrate": 25.6,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "200",
+          "eat_weight": "200"
+        },
+        {
+          "unit_id": 2,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "caomi",
+      "name": "糙米",
+      "aliases": [
+        "糙米饭"
+      ],
+      "category_id": 1,
+      "calories": 111,
+      "protein": 2.6,
+      "fat": 0.9,
+      "carbohydrate": 23,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "xiaomaifen",
+      "name": "小麦粉",
+      "aliases": [
+        "面粉"
+      ],
+      "category_id": 1,
+      "calories": 344,
+      "protein": 11.2,
+      "fat": 1.1,
+      "carbohydrate": 73.6,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "克",
+          "weight": "1",
+          "eat_weight": "1"
+        }
+      ]
+    },
+    {
+      "code": "mantou",
+      "name": "馒头",
+      "aliases": [
+        "白馒头"
+      ],
+      "category_id": 1,
+      "calories": 221,
+      "protein": 7,
+      "fat": 1.1,
+      "carbohydrate": 47,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "80",
+          "eat_weight": "80"
+        },
+        {
+          "unit_id": 2,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "quanmaimianbao",
+      "name": "全麦面包",
+      "aliases": [
+        "全麦吐司"
+      ],
+      "category_id": 1,
+      "calories": 246,
+      "protein": 8.5,
+      "fat": 3.5,
+      "carbohydrate": 45,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "片",
+          "weight": "30",
+          "eat_weight": "30"
+        }
+      ]
+    },
+    {
+      "code": "baimianbao",
+      "name": "白面包",
+      "aliases": [
+        "吐司"
+      ],
+      "category_id": 1,
+      "calories": 265,
+      "protein": 8.3,
+      "fat": 3.2,
+      "carbohydrate": 50,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "片",
+          "weight": "30",
+          "eat_weight": "30"
+        }
+      ]
+    },
+    {
+      "code": "guamian",
+      "name": "挂面",
+      "aliases": [
+        "煮面条",
+        "面条"
+      ],
+      "category_id": 1,
+      "calories": 137,
+      "protein": 4.5,
+      "fat": 0.2,
+      "carbohydrate": 28,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "fangbianmian",
+      "name": "方便面(油炸)",
+      "aliases": [
+        "泡面"
+      ],
+      "category_id": 1,
+      "calories": 472,
+      "protein": 9,
+      "fat": 21,
+      "carbohydrate": 62,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "包",
+          "weight": "80",
+          "eat_weight": "80"
+        }
+      ]
+    },
+    {
+      "code": "yanmaipian",
+      "name": "燕麦片",
+      "aliases": [
+        "燕麦",
+        "即食燕麦"
+      ],
+      "category_id": 1,
+      "calories": 367,
+      "protein": 15,
+      "fat": 6.7,
+      "carbohydrate": 61,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "40",
+          "eat_weight": "40"
+        }
+      ]
+    },
+    {
+      "code": "yumi",
+      "name": "玉米",
+      "aliases": [
+        "煮玉米"
+      ],
+      "category_id": 1,
+      "calories": 112,
+      "protein": 4,
+      "fat": 1.2,
+      "carbohydrate": 22.8,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "根",
+          "weight": "180",
+          "eat_weight": "180"
+        }
+      ]
+    },
+    {
+      "code": "hongshu",
+      "name": "红薯",
+      "aliases": [
+        "地瓜",
+        "烤红薯"
+      ],
+      "category_id": 1,
+      "calories": 99,
+      "protein": 1.6,
+      "fat": 0.2,
+      "carbohydrate": 24.7,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "tudou",
+      "name": "土豆",
+      "aliases": [
+        "马铃薯"
+      ],
+      "category_id": 1,
+      "calories": 81,
+      "protein": 2.6,
+      "fat": 0.2,
+      "carbohydrate": 17.8,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "zishu",
+      "name": "紫薯",
+      "aliases": [],
+      "category_id": 1,
+      "calories": 82,
+      "protein": 1.5,
+      "fat": 0.2,
+      "carbohydrate": 18.4,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "180",
+          "eat_weight": "180"
+        }
+      ]
+    },
+    {
+      "code": "qiaomaimian",
+      "name": "荞麦面",
+      "aliases": [],
+      "category_id": 1,
+      "calories": 122,
+      "protein": 4.5,
+      "fat": 0.9,
+      "carbohydrate": 24,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "yimian",
+      "name": "意面",
+      "aliases": [
+        "意大利面"
+      ],
+      "category_id": 1,
+      "calories": 131,
+      "protein": 5,
+      "fat": 0.9,
+      "carbohydrate": 25,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "盘",
+          "weight": "180",
+          "eat_weight": "180"
+        }
+      ]
+    },
+    {
+      "code": "hefen",
+      "name": "河粉",
+      "aliases": [
+        "炒河粉"
+      ],
+      "category_id": 1,
+      "calories": 109,
+      "protein": 1.4,
+      "fat": 0.2,
+      "carbohydrate": 25,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "mifen",
+      "name": "米粉",
+      "aliases": [],
+      "category_id": 1,
+      "calories": 110,
+      "protein": 1.5,
+      "fat": 0.3,
+      "carbohydrate": 25.2,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "zongzi",
+      "name": "粽子",
+      "aliases": [
+        "肉粽"
+      ],
+      "category_id": 1,
+      "calories": 200,
+      "protein": 4,
+      "fat": 2.5,
+      "carbohydrate": 40,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "youtiao",
+      "name": "油条",
+      "aliases": [],
+      "category_id": 1,
+      "calories": 386,
+      "protein": 6.9,
+      "fat": 17.6,
+      "carbohydrate": 51,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "根",
+          "weight": "70",
+          "eat_weight": "70"
+        }
+      ]
+    },
+    {
+      "code": "shaobing",
+      "name": "烧饼",
+      "aliases": [],
+      "category_id": 1,
+      "calories": 295,
+      "protein": 8,
+      "fat": 9,
+      "carbohydrate": 46,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "80",
+          "eat_weight": "80"
+        }
+      ]
+    },
+    {
+      "code": "jixiongrou",
+      "name": "鸡胸肉",
+      "aliases": [
+        "鸡胸"
+      ],
+      "category_id": 2,
+      "calories": 133,
+      "protein": 24.6,
+      "fat": 5,
+      "carbohydrate": 0,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        },
+        {
+          "unit_id": 2,
+          "unit_name": "块",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "jitui",
+      "name": "鸡腿",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 181,
+      "protein": 20,
+      "fat": 11,
+      "carbohydrate": 0,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "120",
+          "eat_weight": "120"
+        }
+      ]
+    },
+    {
+      "code": "niurou",
+      "name": "牛肉(瘦)",
+      "aliases": [
+        "瘦牛肉"
+      ],
+      "category_id": 2,
+      "calories": 106,
+      "protein": 20.2,
+      "fat": 2.3,
+      "carbohydrate": 0,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "zhurou",
+      "name": "猪肉(瘦)",
+      "aliases": [
+        "瘦肉"
+      ],
+      "category_id": 2,
+      "calories": 143,
+      "protein": 20.3,
+      "fat": 6.2,
+      "carbohydrate": 0,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "wuhuarou",
+      "name": "五花肉",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 395,
+      "protein": 13,
+      "fat": 37,
+      "carbohydrate": 0,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "yangrou",
+      "name": "羊肉",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 203,
+      "protein": 19,
+      "fat": 14,
+      "carbohydrate": 0,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "yarou",
+      "name": "鸭肉",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 240,
+      "protein": 15.5,
+      "fat": 19.7,
+      "carbohydrate": 0,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "yurou",
+      "name": "鱼肉(草鱼)",
+      "aliases": [
+        "草鱼",
+        "清蒸鱼"
+      ],
+      "category_id": 2,
+      "calories": 112,
+      "protein": 17,
+      "fat": 5,
+      "carbohydrate": 0,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "sanwenyu",
+      "name": "三文鱼",
+      "aliases": [
+        "鲑鱼"
+      ],
+      "category_id": 2,
+      "calories": 139,
+      "protein": 20,
+      "fat": 6,
+      "carbohydrate": 0,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "片",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "xia",
+      "name": "虾",
+      "aliases": [
+        "基围虾",
+        "大虾"
+      ],
+      "category_id": 2,
+      "calories": 93,
+      "protein": 18.6,
+      "fat": 1.5,
+      "carbohydrate": 0.1,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "jidan",
+      "name": "鸡蛋",
+      "aliases": [
+        "煮鸡蛋",
+        "水煮蛋"
+      ],
+      "category_id": 2,
+      "calories": 144,
+      "protein": 13.3,
+      "fat": 8.8,
+      "carbohydrate": 2.8,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "yadan",
+      "name": "鸭蛋",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 180,
+      "protein": 12.6,
+      "fat": 13,
+      "carbohydrate": 3.1,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "60",
+          "eat_weight": "60"
+        }
+      ]
+    },
+    {
+      "code": "niunai",
+      "name": "牛奶",
+      "aliases": [
+        "纯牛奶"
+      ],
+      "category_id": 2,
+      "calories": 54,
+      "protein": 3,
+      "fat": 3.2,
+      "carbohydrate": 3.4,
+      "health_light": 1,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "杯",
+          "weight": "250",
+          "eat_weight": "250"
+        },
+        {
+          "unit_id": 2,
+          "unit_name": "盒",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "tuozhiniunai",
+      "name": "脱脂牛奶",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 34,
+      "protein": 3.4,
+      "fat": 0.1,
+      "carbohydrate": 4.9,
+      "health_light": 1,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "杯",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "suannai",
+      "name": "酸奶",
+      "aliases": [
+        "原味酸奶"
+      ],
+      "category_id": 2,
+      "calories": 72,
+      "protein": 2.5,
+      "fat": 2.7,
+      "carbohydrate": 9.3,
+      "health_light": 1,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "杯",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "doufu",
+      "name": "豆腐",
+      "aliases": [
+        "北豆腐",
+        "嫩豆腐"
+      ],
+      "category_id": 2,
+      "calories": 81,
+      "protein": 8.1,
+      "fat": 3.7,
+      "carbohydrate": 4.2,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "块",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "doujiang",
+      "name": "豆浆",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 14,
+      "protein": 1.8,
+      "fat": 0.7,
+      "carbohydrate": 1.1,
+      "health_light": 1,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "杯",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "dougan",
+      "name": "豆干",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 140,
+      "protein": 16,
+      "fat": 5,
+      "carbohydrate": 8,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "块",
+          "weight": "40",
+          "eat_weight": "40"
+        }
+      ]
+    },
+    {
+      "code": "huotuichang",
+      "name": "火腿肠",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 212,
+      "protein": 14,
+      "fat": 16,
+      "carbohydrate": 4,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "根",
+          "weight": "30",
+          "eat_weight": "30"
+        }
+      ]
+    },
+    {
+      "code": "peigen",
+      "name": "培根",
+      "aliases": [],
+      "category_id": 2,
+      "calories": 393,
+      "protein": 14,
+      "fat": 37,
+      "carbohydrate": 1,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "片",
+          "weight": "15",
+          "eat_weight": "15"
+        }
+      ]
+    },
+    {
+      "code": "pingguo",
+      "name": "苹果",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 53,
+      "protein": 0.4,
+      "fat": 0.2,
+      "carbohydrate": 13.7,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "xiangjiao",
+      "name": "香蕉",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 93,
+      "protein": 1.4,
+      "fat": 0.2,
+      "carbohydrate": 22,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "根",
+          "weight": "120",
+          "eat_weight": "120"
+        }
+      ]
+    },
+    {
+      "code": "chengzi",
+      "name": "橙子",
+      "aliases": [
+        "脐橙"
+      ],
+      "category_id": 3,
+      "calories": 48,
+      "protein": 0.8,
+      "fat": 0.2,
+      "carbohydrate": 11.1,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "180",
+          "eat_weight": "180"
+        }
+      ]
+    },
+    {
+      "code": "li",
+      "name": "梨",
+      "aliases": [
+        "雪梨"
+      ],
+      "category_id": 3,
+      "calories": 44,
+      "protein": 0.4,
+      "fat": 0.1,
+      "carbohydrate": 10,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "putao",
+      "name": "葡萄",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 44,
+      "protein": 0.5,
+      "fat": 0.2,
+      "carbohydrate": 10.3,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "串",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "xigua",
+      "name": "西瓜",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 31,
+      "protein": 0.5,
+      "fat": 0.2,
+      "carbohydrate": 7,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "块",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "caomei",
+      "name": "草莓",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 32,
+      "protein": 1,
+      "fat": 0.2,
+      "carbohydrate": 7.1,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "lanmei",
+      "name": "蓝莓",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 57,
+      "protein": 0.7,
+      "fat": 0.3,
+      "carbohydrate": 14,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "mangguo",
+      "name": "芒果",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 35,
+      "protein": 0.6,
+      "fat": 0.2,
+      "carbohydrate": 8.3,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "huolongguo",
+      "name": "火龙果",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 55,
+      "protein": 1.1,
+      "fat": 0.2,
+      "carbohydrate": 13.3,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "300",
+          "eat_weight": "300"
+        }
+      ]
+    },
+    {
+      "code": "mihoutao",
+      "name": "猕猴桃",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 61,
+      "protein": 0.8,
+      "fat": 0.6,
+      "carbohydrate": 14.5,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "fanqie",
+      "name": "番茄",
+      "aliases": [
+        "西红柿"
+      ],
+      "category_id": 3,
+      "calories": 19,
+      "protein": 0.9,
+      "fat": 0.2,
+      "carbohydrate": 3.3,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "huanggua",
+      "name": "黄瓜",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 16,
+      "protein": 0.8,
+      "fat": 0.2,
+      "carbohydrate": 2.9,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "根",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "baicai",
+      "name": "白菜",
+      "aliases": [
+        "大白菜"
+      ],
+      "category_id": 3,
+      "calories": 17,
+      "protein": 1.5,
+      "fat": 0.1,
+      "carbohydrate": 3.2,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "bocai",
+      "name": "菠菜",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 28,
+      "protein": 2.6,
+      "fat": 0.3,
+      "carbohydrate": 4.5,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "xilanhua",
+      "name": "西兰花",
+      "aliases": [
+        "花椰菜绿"
+      ],
+      "category_id": 3,
+      "calories": 36,
+      "protein": 4.1,
+      "fat": 0.6,
+      "carbohydrate": 4.3,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "huluobo",
+      "name": "胡萝卜",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 39,
+      "protein": 1,
+      "fat": 0.2,
+      "carbohydrate": 8.8,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "根",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "qiezi",
+      "name": "茄子",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 23,
+      "protein": 1.1,
+      "fat": 0.2,
+      "carbohydrate": 4.9,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "qingjiao",
+      "name": "青椒",
+      "aliases": [
+        "辣椒青"
+      ],
+      "category_id": 3,
+      "calories": 22,
+      "protein": 1,
+      "fat": 0.2,
+      "carbohydrate": 5.2,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "yangcong",
+      "name": "洋葱",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 39,
+      "protein": 1.1,
+      "fat": 0.2,
+      "carbohydrate": 9,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "shengcai",
+      "name": "生菜",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 13,
+      "protein": 1.3,
+      "fat": 0.3,
+      "carbohydrate": 1.3,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "80",
+          "eat_weight": "80"
+        }
+      ]
+    },
+    {
+      "code": "qincai",
+      "name": "芹菜",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 14,
+      "protein": 0.8,
+      "fat": 0.1,
+      "carbohydrate": 3.9,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "nangua",
+      "name": "南瓜",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 22,
+      "protein": 0.7,
+      "fat": 0.1,
+      "carbohydrate": 5.3,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "块",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "lianou",
+      "name": "莲藕",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 70,
+      "protein": 2.6,
+      "fat": 0.1,
+      "carbohydrate": 15.2,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "100",
+          "eat_weight": "100"
+        }
+      ]
+    },
+    {
+      "code": "muer",
+      "name": "木耳",
+      "aliases": [
+        "黑木耳泡发"
+      ],
+      "category_id": 3,
+      "calories": 27,
+      "protein": 1.5,
+      "fat": 0.2,
+      "carbohydrate": 6,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    },
+    {
+      "code": "haidai",
+      "name": "海带",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 12,
+      "protein": 1.2,
+      "fat": 0.1,
+      "carbohydrate": 2.1,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "80",
+          "eat_weight": "80"
+        }
+      ]
+    },
+    {
+      "code": "huasheng",
+      "name": "花生",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 563,
+      "protein": 24,
+      "fat": 44,
+      "carbohydrate": 16,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "把",
+          "weight": "20",
+          "eat_weight": "20"
+        }
+      ]
+    },
+    {
+      "code": "hetao",
+      "name": "核桃",
+      "aliases": [],
+      "category_id": 3,
+      "calories": 646,
+      "protein": 14,
+      "fat": 58,
+      "carbohydrate": 18,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "10",
+          "eat_weight": "10"
+        }
+      ]
+    },
+    {
+      "code": "xingren",
+      "name": "杏仁",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 578,
+      "protein": 22,
+      "fat": 50,
+      "carbohydrate": 20,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "把",
+          "weight": "15",
+          "eat_weight": "15"
+        }
+      ]
+    },
+    {
+      "code": "guazi",
+      "name": "瓜子",
+      "aliases": [
+        "葵花籽"
+      ],
+      "category_id": 4,
+      "calories": 606,
+      "protein": 19,
+      "fat": 53,
+      "carbohydrate": 17,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "把",
+          "weight": "20",
+          "eat_weight": "20"
+        }
+      ]
+    },
+    {
+      "code": "ganlanyou",
+      "name": "橄榄油",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 899,
+      "protein": 0,
+      "fat": 99.9,
+      "carbohydrate": 0,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "勺",
+          "weight": "10",
+          "eat_weight": "10"
+        }
+      ]
+    },
+    {
+      "code": "huangyou",
+      "name": "黄油",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 717,
+      "protein": 0.9,
+      "fat": 81,
+      "carbohydrate": 0.1,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "勺",
+          "weight": "10",
+          "eat_weight": "10"
+        }
+      ]
+    },
+    {
+      "code": "baishatang",
+      "name": "白砂糖",
+      "aliases": [
+        "糖"
+      ],
+      "category_id": 4,
+      "calories": 400,
+      "protein": 0,
+      "fat": 0,
+      "carbohydrate": 100,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "勺",
+          "weight": "5",
+          "eat_weight": "5"
+        }
+      ]
+    },
+    {
+      "code": "fengmi",
+      "name": "蜂蜜",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 321,
+      "protein": 0.4,
+      "fat": 0,
+      "carbohydrate": 80,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "勺",
+          "weight": "10",
+          "eat_weight": "10"
+        }
+      ]
+    },
+    {
+      "code": "kele",
+      "name": "可乐",
+      "aliases": [
+        "碳酸饮料"
+      ],
+      "category_id": 4,
+      "calories": 43,
+      "protein": 0,
+      "fat": 0,
+      "carbohydrate": 10.6,
+      "health_light": 3,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "罐",
+          "weight": "330",
+          "eat_weight": "330"
+        },
+        {
+          "unit_id": 2,
+          "unit_name": "瓶",
+          "weight": "500",
+          "eat_weight": "500"
+        }
+      ]
+    },
+    {
+      "code": "shupian",
+      "name": "薯片",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 548,
+      "protein": 5,
+      "fat": 35,
+      "carbohydrate": 52,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "包",
+          "weight": "40",
+          "eat_weight": "40"
+        }
+      ]
+    },
+    {
+      "code": "qiaokeli",
+      "name": "巧克力",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 535,
+      "protein": 5,
+      "fat": 30,
+      "carbohydrate": 60,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "块",
+          "weight": "20",
+          "eat_weight": "20"
+        }
+      ]
+    },
+    {
+      "code": "bingqilin",
+      "name": "冰淇淋",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 207,
+      "protein": 3.5,
+      "fat": 11,
+      "carbohydrate": 24,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "80",
+          "eat_weight": "80"
+        }
+      ]
+    },
+    {
+      "code": "dangao",
+      "name": "蛋糕",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 347,
+      "protein": 5,
+      "fat": 15,
+      "carbohydrate": 50,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "块",
+          "weight": "80",
+          "eat_weight": "80"
+        }
+      ]
+    },
+    {
+      "code": "binggan",
+      "name": "饼干",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 433,
+      "protein": 7,
+      "fat": 14,
+      "carbohydrate": 70,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "片",
+          "weight": "10",
+          "eat_weight": "10"
+        }
+      ]
+    },
+    {
+      "code": "xihongshichaodan",
+      "name": "西红柿炒蛋",
+      "aliases": [
+        "番茄炒蛋"
+      ],
+      "category_id": 4,
+      "calories": 110,
+      "protein": 7,
+      "fat": 7,
+      "carbohydrate": 5,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "qingjiaorousi",
+      "name": "青椒肉丝",
+      "aliases": [],
+      "category_id": 4,
+      "calories": 145,
+      "protein": 12,
+      "fat": 9,
+      "carbohydrate": 4,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "yuxiangrousi",
+      "name": "鱼香肉丝",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 160,
+      "protein": 11,
+      "fat": 10,
+      "carbohydrate": 8,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "gongbaojiding",
+      "name": "宫保鸡丁",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 180,
+      "protein": 14,
+      "fat": 10,
+      "carbohydrate": 8,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "220",
+          "eat_weight": "220"
+        }
+      ]
+    },
+    {
+      "code": "hongshaorou",
+      "name": "红烧肉",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 320,
+      "protein": 12,
+      "fat": 28,
+      "carbohydrate": 6,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "150",
+          "eat_weight": "150"
+        }
+      ]
+    },
+    {
+      "code": "tangcupaigu",
+      "name": "糖醋排骨",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 280,
+      "protein": 14,
+      "fat": 18,
+      "carbohydrate": 16,
+      "health_light": 3,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "180",
+          "eat_weight": "180"
+        }
+      ]
+    },
+    {
+      "code": "mapodoufu",
+      "name": "麻婆豆腐",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 120,
+      "protein": 8,
+      "fat": 8,
+      "carbohydrate": 5,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "suanrongxilanhua",
+      "name": "蒜蓉西兰花",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 55,
+      "protein": 4,
+      "fat": 2,
+      "carbohydrate": 6,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "qingchaoshishu",
+      "name": "清炒时蔬",
+      "aliases": [
+        "炒青菜"
+      ],
+      "category_id": 5,
+      "calories": 45,
+      "protein": 2,
+      "fat": 2,
+      "carbohydrate": 5,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "suanlatudousi",
+      "name": "酸辣土豆丝",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 90,
+      "protein": 2,
+      "fat": 3,
+      "carbohydrate": 14,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "180",
+          "eat_weight": "180"
+        }
+      ]
+    },
+    {
+      "code": "danchaofan",
+      "name": "蛋炒饭",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 186,
+      "protein": 6,
+      "fat": 6,
+      "carbohydrate": 27,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "niuroumian",
+      "name": "牛肉面",
+      "aliases": [
+        "一碗牛肉面"
+      ],
+      "category_id": 5,
+      "calories": 120,
+      "protein": 7,
+      "fat": 3.5,
+      "carbohydrate": 16,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "450",
+          "eat_weight": "450"
+        }
+      ]
+    },
+    {
+      "code": "doujiangyoutiao",
+      "name": "豆浆油条",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 220,
+      "protein": 6,
+      "fat": 12,
+      "carbohydrate": 22,
+      "health_light": 3,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "套",
+          "weight": "300",
+          "eat_weight": "300"
+        }
+      ]
+    },
+    {
+      "code": "shala",
+      "name": "沙拉(蔬菜)",
+      "aliases": [
+        "蔬菜沙拉"
+      ],
+      "category_id": 5,
+      "calories": 35,
+      "protein": 1.5,
+      "fat": 0.5,
+      "carbohydrate": 6,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "200",
+          "eat_weight": "200"
+        }
+      ]
+    },
+    {
+      "code": "jixiongshala",
+      "name": "鸡胸肉沙拉",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 95,
+      "protein": 14,
+      "fat": 3,
+      "carbohydrate": 4,
+      "health_light": 1,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "份",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "zhou",
+      "name": "粥(大米)",
+      "aliases": [
+        "白粥",
+        "稀饭"
+      ],
+      "category_id": 5,
+      "calories": 46,
+      "protein": 1.1,
+      "fat": 0.3,
+      "carbohydrate": 9.5,
+      "health_light": 1,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "300",
+          "eat_weight": "300"
+        }
+      ]
+    },
+    {
+      "code": "xiaomizhou",
+      "name": "小米粥",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 46,
+      "protein": 1.4,
+      "fat": 0.4,
+      "carbohydrate": 8.4,
+      "health_light": 1,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "300",
+          "eat_weight": "300"
+        }
+      ]
+    },
+    {
+      "code": "huntun",
+      "name": "馄饨",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 140,
+      "protein": 6,
+      "fat": 4,
+      "carbohydrate": 20,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "碗",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "jiaozi",
+      "name": "饺子(猪肉白菜)",
+      "aliases": [
+        "水饺"
+      ],
+      "category_id": 5,
+      "calories": 200,
+      "protein": 9,
+      "fat": 8,
+      "carbohydrate": 23,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "25",
+          "eat_weight": "25"
+        },
+        {
+          "unit_id": 2,
+          "unit_name": "盘",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "baozi",
+      "name": "包子(肉包)",
+      "aliases": [
+        "猪肉包"
+      ],
+      "category_id": 5,
+      "calories": 230,
+      "protein": 8,
+      "fat": 8,
+      "carbohydrate": 30,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "个",
+          "weight": "80",
+          "eat_weight": "80"
+        }
+      ]
+    },
+    {
+      "code": "kafei",
+      "name": "咖啡(黑)",
+      "aliases": [
+        "美式咖啡"
+      ],
+      "category_id": 5,
+      "calories": 2,
+      "protein": 0.1,
+      "fat": 0,
+      "carbohydrate": 0.3,
+      "health_light": 1,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "杯",
+          "weight": "240",
+          "eat_weight": "240"
+        }
+      ]
+    },
+    {
+      "code": "nate",
+      "name": "拿铁",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 45,
+      "protein": 2.5,
+      "fat": 2,
+      "carbohydrate": 4,
+      "health_light": 2,
+      "is_liquid": false,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "杯",
+          "weight": "300",
+          "eat_weight": "300"
+        }
+      ]
+    },
+    {
+      "code": "lucha",
+      "name": "绿茶",
+      "aliases": [
+        "茶"
+      ],
+      "category_id": 5,
+      "calories": 0,
+      "protein": 0,
+      "fat": 0,
+      "carbohydrate": 0,
+      "health_light": 1,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "杯",
+          "weight": "250",
+          "eat_weight": "250"
+        }
+      ]
+    },
+    {
+      "code": "pijiu",
+      "name": "啤酒",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 43,
+      "protein": 0.5,
+      "fat": 0,
+      "carbohydrate": 3.8,
+      "health_light": 3,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "瓶",
+          "weight": "500",
+          "eat_weight": "500"
+        }
+      ]
+    },
+    {
+      "code": "baijiu",
+      "name": "白酒",
+      "aliases": [],
+      "category_id": 5,
+      "calories": 350,
+      "protein": 0,
+      "fat": 0,
+      "carbohydrate": 0,
+      "health_light": 3,
+      "is_liquid": true,
+      "image_url": "",
+      "units": [
+        {
+          "unit_id": 1,
+          "unit_name": "两",
+          "weight": "50",
+          "eat_weight": "50"
+        }
+      ]
+    }
+  ]
+}

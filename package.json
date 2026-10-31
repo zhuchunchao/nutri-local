@@ -1,0 +1,14 @@
+{
+  "name": "nutri-local",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first nutrition desk: food DB, recognition, recipes, weight & diet logs (offline-capable)",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node scripts/build-seed.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
