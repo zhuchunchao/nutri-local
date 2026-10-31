@@ -6,7 +6,8 @@
   "description": "Local-first nutrition desk: food DB, recognition, recipes, weight & diet logs (offline-capable)",
   "scripts": {
     "start": "node src/server.js",
-    "seed": "node scripts/build-seed.mjs"
+    "seed": "node scripts/build-seed.mjs",
+    "test": "node --test tests/"
   },
   "engines": {
     "node": ">=18"
