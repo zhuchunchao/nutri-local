@@ -105,6 +105,21 @@ TLS 在 Nginx / Caddy 终止，反代到本机 `8790`；防火墙勿对公网开
 - `POST /api/food/image_recognize` `{ "hint"?, "filename"?, "image_url"?, "image_data"? }` → `{ data: { task_id } }`
 - `GET /api/food/image_recognize_detail?task_id=`
 
+### 图片识别（可选视觉模型）
+
+响应形状不变：提交得到 `{ data: { task_id } }`，详情仍是 `status` / `task_id` / `hint` / `foods` / `note`（另带 `source`: `offline` 或 `vision`）。
+
+未设置 `VISION_API_KEY` 时完全离线：用 `hint` 或文件名做本地食物库匹配；匹配不到则返回绿灯候选。
+
+设置 Key 后，且请求里有 `image_url`（http/https 或 data URL）或 `image_data`（base64 / data URL）时，先请求 OpenAI 兼容的 `POST {VISION_API_BASE}/chat/completions`（图片放在 `image_url`）。模型需返回 `{name, amount_g, meal_hint}` 列表，再经本地 `textRecognize` 映射到食物库。Key 缺失、超时、HTTP 失败或解析失败时，自动退回上面的离线行为。
+
+| 变量 | 默认 | 说明 |
+|------|------|------|
+| `VISION_API_KEY` | 空 | 有值才启用视觉识别。不要写入仓库 |
+| `VISION_API_BASE` | `https://api.openai.com/v1` | 兼容端点，需含 `/v1` 这一段 |
+| `VISION_MODEL` | `gpt-4o-mini` | 也可改为 `gpt-4o` 或其他支持图像的模型 |
+| `VISION_TIMEOUT_MS` | `20000` | 视觉请求超时（毫秒） |
+
 ## 食谱
 
 - `GET /api/recipe/mode_list`

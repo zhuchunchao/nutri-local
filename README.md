@@ -26,4 +26,4 @@ npm start
 
 本地调试可设 `NUTRI_AUTH_DISABLED=1`（公网禁止）。详细步骤见 [API.md](./API.md)。
 
-不调用薄荷线上 API；图片识别目前为描述/文件名本地匹配，可后续换视觉模型。
+不调用薄荷线上 API。图片识别默认离线（`hint` / 文件名匹配本地食物库）。若配置 `VISION_API_KEY`（可选 `VISION_API_BASE`、`VISION_MODEL`、`VISION_TIMEOUT_MS`，见 `.env.example`），`/api/food/image_recognize` 会先走 OpenAI 兼容视觉接口，失败或未配 Key 时仍退回离线结果。不要把 Key 提交进仓库。

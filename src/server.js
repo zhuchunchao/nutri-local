@@ -10,6 +10,7 @@ import {
   rateLimitConfig,
   rateLimitDisabled,
 } from "./rate-limit.js";
+import { visionConfig } from "./engine/vision.js";
 
 loadEnv();
 
@@ -161,6 +162,12 @@ server.listen(PORT, HOST, () => {
     rateLimitDisabled()
       ? "Rate limit: DISABLED"
       : `Rate limit: ${rl.max} req / ${rl.windowMs}ms per IP`,
+  );
+  const vision = visionConfig();
+  console.log(
+    vision.enabled
+      ? `Vision: enabled model=${vision.model} base=${vision.base}`
+      : "Vision: offline (VISION_API_KEY unset) — image_recognize uses hint/filename",
   );
   console.log("TLS: put Nginx/Caddy in front; do not expose plain 8790 to the public Internet.");
   console.log("JSON only — no UI. See API.md");

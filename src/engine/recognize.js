@@ -1,5 +1,10 @@
 import { loadFoods } from "../db.js";
 import { macrosFor, round1 } from "./food.js";
+import {
+  recognizeFoodsFromImage,
+  toVisionImageUrl,
+  visionConfig,
+} from "./vision.js";
 
 const MEAL_WORDS = [
   { keys: ["早餐", "早上", "早晨", "早饭"], time_type: 1 },
@@ -119,41 +124,137 @@ export function textRecognize({ text } = {}) {
   };
 }
 
-/**
- * Offline image recognition (practical local substitute):
- * - If caption/hint provided, run textRecognize
- * - Else return top green foods as candidates for user confirm
- * True CV models can be plugged into /local/vision later.
- */
-export function imageRecognizeLocal({ image_url, image_data, hint, filename } = {}) {
-  const task_id = `local_${Date.now().toString(36)}`;
-  const caption = hint || guessHintFromName(filename || image_url || "");
+function candidateStaples() {
+  const { foods: all } = loadFoods();
+  return all
+    .filter((f) => f.health_light === 1)
+    .slice(0, 8)
+    .map((f) => ({
+      code: f.code,
+      name: f.name,
+      calorie: f.calories,
+      protein: f.protein,
+      fat: f.fat,
+      carbohydrate: f.carbohydrate,
+      health_light: f.health_light,
+      amount: 100,
+      note: "未识别到明确食物，请从候选确认或填写描述",
+    }));
+}
+
+function foodsFromCaption(caption) {
   const recognized = caption
     ? textRecognize({ text: caption })
     : { data: { result: [{ time_type: 2, foods: [] }] } };
+  const foods = recognized?.data?.result?.[0]?.foods || [];
+  if (foods.length) return foods;
+  return candidateStaples();
+}
 
-  const foods =
-    recognized?.data?.result?.[0]?.foods ||
-    [];
+function applyAmount(food, grams) {
+  const amount = round1(grams);
+  const macros = macrosFor(
+    {
+      calories: food.calorie ?? food.calories,
+      protein: food.protein,
+      fat: food.fat,
+      carbohydrate: food.carbohydrate,
+    },
+    amount,
+  );
+  return {
+    ...food,
+    amount,
+    intake_calories: macros.calories,
+    intake_protein: macros.protein,
+    intake_fat: macros.fat,
+    intake_carbohydrate: macros.carbohydrate,
+  };
+}
 
-  // if nothing matched, suggest healthy staples
-  let candidates = foods;
-  if (!candidates.length) {
-    const { foods: all } = loadFoods();
-    candidates = all
-      .filter((f) => f.health_light === 1)
-      .slice(0, 8)
-      .map((f) => ({
-        code: f.code,
-        name: f.name,
-        calorie: f.calories,
-        protein: f.protein,
-        fat: f.fat,
-        carbohydrate: f.carbohydrate,
-        health_light: f.health_light,
-        amount: 100,
-        note: "未识别到明确食物，请从候选确认或填写描述",
-      }));
+/**
+ * Map vision items through the local food DB (textRecognize).
+ * One item → one text query so amounts stay attached to the right name.
+ */
+export function mapVisionItems(items) {
+  const foods = [];
+  const bits = [];
+  for (const item of items || []) {
+    const name = String(item?.name || "").trim();
+    if (!name) continue;
+    const amount = Number(item.amount_g);
+    const meal = String(item.meal_hint || "").trim();
+    const qty = Number.isFinite(amount) && amount > 0 ? `${amount}克` : "";
+    const text = `${meal}${qty}${name}`;
+    bits.push(text);
+    const recognized = textRecognize({ text });
+    let matched = recognized?.data?.result?.[0]?.foods || [];
+    if (matched.length === 1 && Number.isFinite(amount) && amount > 0) {
+      matched = [applyAmount(matched[0], amount)];
+    }
+    foods.push(...matched);
+  }
+  return { foods, caption: bits.join("，") };
+}
+
+function offlineNote(hint) {
+  return hint
+    ? "基于描述/文件名的本地匹配"
+    : "本地轻量模式：无视觉模型时返回候选，可填写 hint 提高准确度";
+}
+
+/**
+ * Image recognition.
+ * When VISION_API_KEY is set and an image URL or image_data is present,
+ * ask an OpenAI-compatible vision model, then map names through textRecognize.
+ * Missing key, no image, or any call failure keeps the offline hint/filename path.
+ *
+ * Response shape is unchanged: `{ data: { task_id } }`.
+ */
+export async function imageRecognizeLocal(
+  { image_url, image_data, hint, filename } = {},
+  deps = {},
+) {
+  const task_id = `local_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
+  const caption = hint || guessHintFromName(filename || image_url || "");
+
+  let source = "offline";
+  let foods = null;
+  let usedHint = caption || "";
+  let note = offlineNote(usedHint);
+
+  const cfg = deps.config || visionConfig();
+  if (cfg.enabled && toVisionImageUrl({ image_url, image_data })) {
+    try {
+      const vision = await recognizeFoodsFromImage(
+        { image_url, image_data, hint, filename },
+        deps,
+      );
+      if (vision.ok) {
+        const mapped = mapVisionItems(vision.items);
+        if (mapped.foods.length) {
+          source = "vision";
+          foods = mapped.foods;
+          usedHint = mapped.caption || usedHint;
+          note = "基于视觉模型识别并在本地食物库匹配";
+        } else {
+          console.warn("image_recognize: vision fallback (unmapped)");
+        }
+      } else if (vision.reason !== "no_key" && vision.reason !== "no_image") {
+        console.warn(`image_recognize: vision fallback (${vision.reason})`);
+      }
+    } catch (err) {
+      console.warn(
+        `image_recognize: vision fallback (${err?.name || "error"})`,
+      );
+    }
+  }
+
+  if (!foods) {
+    foods = foodsFromCaption(caption);
+    source = "offline";
+    usedHint = caption || "";
+    note = offlineNote(usedHint);
   }
 
   globalThis.__nutriImageTasks = globalThis.__nutriImageTasks || new Map();
@@ -162,14 +263,16 @@ export function imageRecognizeLocal({ image_url, image_data, hint, filename } = 
     status: "done",
     created_at: Date.now(),
     has_image: !!(image_url || image_data),
-    hint: caption || "",
-    foods: candidates,
+    hint: usedHint,
+    foods,
+    source,
+    note,
   });
 
   return {
     code: 0,
     message: "success",
-    offline: true,
+    offline: source !== "vision",
     data: { task_id },
   };
 }
@@ -178,18 +281,18 @@ export function imageRecognizeDetail({ task_id } = {}) {
   const map = globalThis.__nutriImageTasks || new Map();
   const task = map.get(task_id);
   if (!task) return { code: 404, message: "task 不存在", data: null };
+  const source = task.source || "offline";
   return {
     code: 0,
     message: "success",
-    offline: true,
+    offline: source !== "vision",
     data: {
       status: "done",
       task_id: task.task_id,
       hint: task.hint,
       foods: task.foods,
-      note: task.hint
-        ? "基于描述/文件名的本地匹配"
-        : "本地轻量模式：无视觉模型时返回候选，可填写 hint 提高准确度",
+      source,
+      note: task.note || offlineNote(task.hint),
     },
   };
 }
